@@ -8,6 +8,11 @@ import {
   LatestInvoicesSkeleton,
   RevenueChartSkeleton,
 } from "@/app/ui/skeletons";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home",
+};
 
 export default async function Page() {
   return (
@@ -21,6 +26,7 @@ export default async function Page() {
           <CardsWrapper />
         </Suspense>
       </div>
+
       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-8">
         <Suspense fallback={<RevenueChartSkeleton />}>
           <RevenueChart />
